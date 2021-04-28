@@ -1,0 +1,32 @@
+{
+  "name": "processo_africa",
+  "version": "1.0.0",
+  "description": "Co-manufacturing hub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allison-lekwa/processo-africa.git"
+  },
+  "author": "Allison",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allison-lekwa/processo-africa/issues"
+  },
+  "homepage": "https://github.com/allison-lekwa/processo-africa#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "deep-email-validator": "^0.1.18",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "fast-csv": "^4.3.6",
+    "knex": "^0.95.4",
+    "naija-state-local-government": "^1.1.2",
+    "nodemon": "^2.0.7",
+    "pg": "^8.6.0"
+  }
+}

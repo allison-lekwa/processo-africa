@@ -1,3 +1,186 @@
 <%- include ('partials/header') %>
 
+<script type="text/javascript">
+
+    function changeFunc() {
+        var selectBox = document.getElementById("selectBox");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+        return selectedValue;
+    }
+ 
+</script>
+
+
+<div class="custom-container">
+    
+    <% if(typeof success != "undefined") { %>
+        <% success.forEach((success) => {%>
+         <div class="alert alert-success"> <%= success.message %></div>
+
+        <%})%>
+    <% } %>
+    <% if(typeof error != "undefined") { %>
+        <% errors.forEach((error) => {%>
+            <script>
+                jQuery(function(){
+                    jQuery('#modal').trigger('click');
+                });
+            </script>
+        <%})%>
+    <% } %>
+
+    
+    <div class="row">
+        <div class="col-sm-3 col-md-6 col-lg-5  align-self-center">
+            <div class="custom-container-agro">
+                <h2 class="title-page custom-text-h2">Agro processing</h2>
+                <h2 class="custom-text-h2">made easy</h2>
+                <p>
+                    Want to add value to your agricultural produce?
+                </p>
+                <p></p>
+                <p>
+                    Visit our:
+                </p>
+                <p>
+                    One-stop shop for your food processing needs.
+                </p>
+                <p></p>
+                <p>
+                    To get early access to these incredible services.
+                </p>
+                <p>
+                    Click the button below.
+                </p>
+
+                <p>
+                    <a id="modal" class="btn btn-success custom-color" href="#form-register">Register</a>
+                </p>
+
+
+            </div>
+        </div>
+        <div class= "col-sm-9 col-md-6 col-lg-7 align-self-end">
+            <div class="container">
+                <img src="/Group 55.png" alt="">
+            </div>
+
+        </div>
+        
+      </div>
+
+</div>
+<div class="custom-container-dim">
+</div>
+<div class="custom-container-grp">
+    <img  class="img-fluid" src="/Group 56 new.png" alt="">
+
+
+</div>
+<div class="container" id="form-register">
+    <div class="custom-container-top"></div>
+    
+    <div class="pb-5">
+        <div class="container">
+            <h4 class="page-title custom-text-h2 text-center">Kindly fill the form below</h4>
+            <div id="register-box" class="rounded">
+                <ul>
+                    <% if(typeof errors != "undefined") { %>
+                        <% errors.forEach((error) => {%>
+                            <div id="here" class="alert alert-danger"> <%= error.message %></div>
+            
+                        <%})%>
+                    <% } %>
+                </ul>
+                <form action="/" method="POST" class="justify-content-center">
+                    <h5 class="display-6 py-2 text-left">*Required</h5>
+                    
+                    <div class="form-group required">
+                        <label for="name" class=" text-left control-label"></label>
+                        <input type="text" name="user[name]" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="form-group required">
+                        <label for="CompanyName" class="control-label"></label>
+                        <input type="text" name="user[company]" class="form-control" placeholder="Company Name">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group required">
+                                <label for="country" class="control-label"></label>
+                                <select type="text" data-style="btn-info" name="user[country]" class="form-control selectpicker" placeholder="Country">
+                                    <option value="Nigeria">Nigeria</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group required">
+                                <label for="state" class="control-label"></label>
+                                <select type="text" data-style="btn-info" name="user[state]" class="form-control selectpicker" placeholder="State" id="selectBox" onchange="changeFunc();">
+                                    <optgroup label="Select State">
+                                        <% NaijaStates.states().forEach(function(state){ %>
+                                            <option id="myselect" value="<%= state %>"><%= state %></option>
+                                        <% }) %>
+                                    </optgroup>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group required">
+                                <label for="lga" class="control-label"></label>
+                                <input type="text" name="user[city]" class="form-control" placeholder="City">
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group required">
+                                <label for="email" class="control-label"></label>
+                                <input type="text" name="user[email]" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group required">
+                                <label for="phoneNumber" class="control-label"></label>
+                                <input type="tel" name="user[number]" class="form-control" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check custom-control custom-checkbox">
+                                <input type="checkbox" id="render" name="user[render]" class="form-check-input custom-control-input radio" value="true" onclick="selectOnlyThis(this.id)"">
+                                <label for="render" class="form-check-label custom-control-label">Render Agro Services</label>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check custom-control custom-checkbox">
+                                <input type="checkbox" id="request" name="user[request]" class="form-check-input custom-control-input radio" value="true" onclick="selectOnlyThis(this.id)"">
+                                <label for="request" class="form-check-label custom-control-label">Request Agro Services</label>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="form-group required">
+                        <label for="Email1msg" class="control-label"></label>
+                        <div class="">
+                            <textarea class="form-control" rows="5" type="text" name=user[message] placeholder="What service(s) do you render/require?"></textarea>
+                       </div>
+                   </div>
+                   <div class="form-group required">
+                        <label for="capacity" class="control-label"></label>
+                        <input type="text" name="user[capacity]" class="form-control" placeholder="What is your current capacity per week">
+                   </div>
+                   <button id="button" class="btn btn-success" href="" onclick="gototab();">Submit</button>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+
+
+  
+
 <%- include ('partials/footer') %>

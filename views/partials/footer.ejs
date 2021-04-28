@@ -1,4 +1,55 @@
         
+        <div class="custom-container-footer">
+            <img  class="img-fluid" src="/Group 57.png" alt="">
+        
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+        <script>
+            $(window).scroll(function(){
+                $('nav').toggleClass('scrolled', $(this).scrollTop() > 100)
+            });
+            // the selector will match all input controls of type :checkbox
+            // and attach a click event handler 
+            $("input:checkbox").on('click', function() {
+                // in the handler, 'this' refers to the box clicked on
+                var $box = $(this);
+                if ($box.is(":checked")) {
+                    // the name of the box is retrieved using the .attr() method
+                    // as it is assumed and expected to be immutable
+                    var group = "input:checkbox[type='" + $box.attr("type") + "']";
+                    // the checked state of the group/box on the other hand will change
+                    // and the current value is retrieved using .prop() method
+                    $(group).prop("checked", false);
+                    $box.prop("checked", true);
+                } else {
+                    $box.prop("checked", false);
+                }
+            });
+            function gototab(reload)
+            {
+                window.location.hash = '#here';
+                window.location.reload(true);
+            }
+            jQuery(function(){
+                jQuery('#modal').click();
+            });
+            
+            var state = $( "#myselect" ).val();
+             var x = $( "#myselect option:selected" ).text();
+        </script>
+        <% if(typeof error != "undefined") { %>
+            <% errors.forEach((error) => {%>
+                <script>
+                    jQuery(function(){
+                        jQuery('#modal').trigger('click');
+                    });
+                </script>
+            <%})%>
+        <% } %>
+        <div>
+            x
+        </div>
 
     </body>
 </html>

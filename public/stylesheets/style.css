@@ -1,0 +1,156 @@
+#upper-margin{
+    margin-top: 50px;
+}
+.reduced-width{
+    width: 30%;
+    margin: 30px auto;
+}
+.align-text{
+    text-align: center;
+}
+#background-color{
+    background: #DCDCDC;
+    padding: 20px;
+}
+#name-color{
+    color: #0000FF;
+}
+.thumbnail img{
+    width: 100%;
+}
+.thumbnail{
+    padding: 0;
+}
+.thumbnail .caption-full{
+    padding: 9px;
+}
+.custom-background{
+    background: white;
+}
+.navbar-custom {
+    height: 100px;
+  }
+.bg-navbar{
+    background: rgba(31, 115, 57, .05);
+    border-bottom: 2px solid #1F7339;
+}
+.text-sm-left {
+    text-align: left!important;
+}
+.custom-text{
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: bold;
+    text-indent: 8px;
+    color: #1F7339
+
+}
+.custom-text-h2{
+    font-family: "Montserrat";
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #1F7339
+}
+.custom-container {
+    width: 100%;
+    padding-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .custom-container-top{
+    width: 100%;
+    padding-top: 100px;
+  }
+  .custom-container-agro {
+    width: 100%;
+    padding-left: 80px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .custom-container-dim{
+    width: 100%;
+    height: 80px;
+    background: #1F7339
+
+  }
+  #custom-container-form{
+      width: 100%;
+      height: 100px;
+      background: white;
+  }
+  .custom-container-footer{
+    width: 100%;
+    padding-left: 0;
+    margin: auto;
+  }
+  .custom-container-grp{
+    background: rgba(31, 115, 57, .05);
+    width: 100%;
+    padding-top: 1px;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
+  }
+  .container img {
+    max-height:100%;
+    display: block;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+.btn .btn-success{
+    background: #1F7339
+}
+#img-custom {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+#register-box{
+    max-width: 700px;
+    background-color: #fff;
+    border: 2px solid rgba(31, 115, 57);
+    padding: 15px 40px;
+    margin: 0 auto;
+}
+@media (min-width: 992px) {
+    .page-title{
+        font-size: 35px;
+        font-weight: 400;
+    }
+}
+.form-group.required .control-label:after {
+    content:"*";
+    color:rgba(31, 115, 57);
+    padding: 0;
+  }
+label{
+    margin-bottom: 0;
+}
+.custom-control-label:before{
+    background-color: grey;
+  }
+ 
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    background-color:black;
+}
+.bg-navbar.scrolled{
+    background: white !important
+}
+.nav.navbar-nav.navbar-center.margin{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn.btn-success.custom-color{
+    background-color: rgba(31, 115, 57);
+}
+
